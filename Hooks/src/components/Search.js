@@ -19,11 +19,19 @@ const Search = () => {
       setResults(data.query.search);
     };
 
-    if (term) {
-      search();
-    } else {
-      setResults([]);
-    }
+    const timeoutId = setTimeout(() => {
+      if (term) {
+        search();
+      } else {
+        setResults([]);
+      }
+    }, 500);
+
+    // useEffect is only allowed to return 'cleanup' functions, which function very well when
+    // trying to achieve a throttle on API requests when user is still inputting data.
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, [term]);
 
   const renderedResults = results.map((result) => {
