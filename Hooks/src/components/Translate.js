@@ -13,6 +13,14 @@ const options = [
     {
         label: "Hindi",
         value: "hi"
+    },
+    {
+        label: "Japanese",
+        value: "ja"
+    },
+    {
+        label: "German",
+        value: "de"
     }
 ]
 
