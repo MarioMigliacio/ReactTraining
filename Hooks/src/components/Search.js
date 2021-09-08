@@ -19,6 +19,11 @@ const Search = () => {
       setResults(data.query.search);
     };
 
+    // do our initial search without the timeout delay. This represents first render of component:
+    if (term && !results.length) {
+      search();
+    }
+
     const timeoutId = setTimeout(() => {
       if (term) {
         search();
