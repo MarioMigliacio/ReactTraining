@@ -3,6 +3,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+Google api key for demo:
+AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM
+
 
 In the project directory, you can run:
 ### `npm install` (if cloned)
